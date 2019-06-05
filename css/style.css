@@ -1,0 +1,515 @@
+@charset "utf-8";
+
+body {
+	position: relative;
+}
+
+#canvas {
+	width: 100%;
+	position: absolute;
+	background: url(../img/0/bg.png);
+	background-size: 100%;
+}
+
+#page0 #logo {
+	width: 100%;
+	height: 900px;
+	background: url(../img/0/img.png) center bottom no-repeat;
+}
+
+#page0 #loading, #loadPer {
+	font: bold 64px/80px "Consolas";
+}
+
+#page0 #loading {
+	padding-left: 30%;
+}
+
+#page0 #loadPer {
+	text-align: center;
+}
+
+#page1 {
+	display: none;
+	-webkit-animation: opacity 600ms linear 0s forwards;
+	-moz-animation: opacity 600ms linear 0s forwards;
+	-o-animation: opacity 600ms linear 0s forwards;
+	animation: opacity 600ms linear 0s forwards;
+}
+
+#page1 #page0-picBox {
+	width: 100%;
+	height: 680px;
+	position: relative;
+	background: url(../img/1/ground.png) no-repeat;
+	background-size: 100%;
+}
+
+#page1 #page0-picBox #amd {
+	width: 800px;
+	height: 520px;
+	margin: 150px 0 0 100px;
+	position: absolute;
+	background: url(../img/1/amd.png) no-repeat;
+	background-size: 100%;
+}
+
+#page1 #page0-picBox #amd img {
+	margin-left: 100px;
+}
+
+#page1 #page0-picBox #amdLeft {
+	top: 410px;
+	left: 290px;
+	width: 250px;
+	height: 250px;
+	position: absolute;
+	background: url(../img/1/left.png) no-repeat;
+	background-size: 100%;
+	-webkit-animation: turn 5s linear 0s infinite normal;
+	-moz-animation: turn 5s linear 0s infinite normal;
+	-o-animation: turn 5s linear 0s infinite normal;
+	animation: turn 5s linear 0s infinite normal;
+}
+#page1 #page0-picBox #amdRight {
+	top: 485px;
+	left: 605px;
+	width: 160px;
+	height: 160px;
+	position: absolute;
+	background: url(../img/1/right.png) no-repeat;
+	background-size: 100%;
+	-webkit-animation: turn 5s linear 0s infinite normal;
+	-moz-animation: turn 5s linear 0s infinite normal;
+	-o-animation: turn 5s linear 0s infinite normal;
+	animation: turn 5s linear 0s infinite normal;
+}
+
+#page1 #page1-text {
+	font: bold 40px/55px "微软雅黑";
+	width: 667px;
+	height: 502px;
+	margin: 20px auto 0 auto;
+	position: relative;
+	text-align: center;
+	background: url(../img/1/textBg.png) center no-repeat;
+	padding-top: 64px;
+}
+
+#page1 #page1-text .q {
+	width: 46px;
+	height: 27px;
+	display: inline-block;
+	position: absolute;
+}
+
+#page1 #page1-text #lq {
+	top: 80px;
+	left: 50px;
+	background: url(../img/1/lq.png);
+}
+
+#page1 #page1-text #rq {
+	top: 360px;
+	left: 520px;
+	background: url(../img/1/rq.png);
+}
+
+#page1 #page1-text p {
+	-webkit-opacity: 0;
+	-moz-opacity: 0;
+	opacity: 0;
+}
+
+#page1 #food {
+	width: 100%;
+	height: 300px;
+	background: url(../img/1/food.png) center no-repeat;
+}
+
+#page1 .arrow {
+	width: 100%;
+	height: 50px;
+	bottom: 80px;
+	display: none;
+	position: absolute;
+	background: url(../img/1/arrow.png) center bottom no-repeat;
+	-webkit-animation: arrow 1s cubic-bezier(.55,.055,.675,.19) 0s infinite alternate;
+	-moz-animation: arrow 1s cubic-bezier(.55,.055,.675,.19) 0s infinite alternate;
+	-o-animation: arrow 1s cubic-bezier(.55,.055,.675,.19) 0s infinite alternate;
+	animation: arrow 1s cubic-bezier(.55,.055,.675,.19) 0s infinite alternate;
+}
+
+#page2 {
+	width: 100%;
+	display: none;
+	overflow: hidden;
+	position: relative;
+	-webkit-animation: opacity 600ms linear 0s forwards;
+	-moz-animation: opacity 600ms linear 0s forwards;
+	-o-animation: opacity 600ms linear 0s forwards;
+	animation: opacity 600ms linear 0s forwards;
+}
+
+#page2 #picUp {
+	left: 800px;
+	width: 100%;
+	height: 1080px;
+	z-index: 1;
+	opacity: 0;
+	position: absolute;
+	background: url(../img/2/up.png) center bottom;
+	background-size: 100%;
+	-webkit-animation: page2-picUp 2s cubic-bezier(0.23, 1, 0.32, 1) 0s forwards;
+	-moz-animation: page2-picUp 2s cubic-bezier(0.23, 1, 0.32, 1) 0s forwards;
+	-o-animation: page2-picUp 2s cubic-bezier(0.23, 1, 0.32, 1)) 0s forwards;
+	animation: page2-picUp 2s cubic-bezier(0.23, 1, 0.32, 1)) 0s forwards;
+}
+
+#page2 #picDown {
+	left: -800px;
+	width: 100%;
+	height: 1000px;
+	bottom: 0;
+	z-index: 0;
+	opacity: 0;
+	position: absolute;
+	background: rgba(247, 198, 3, 0.2) url(../img/2/down.png) center top;
+	background-size: 100%;
+	-webkit-animation: page2-picDown 2s cubic-bezier(0.23, 1, 0.32, 1) 600ms forwards;
+	-moz-animation: page2-picDown 2s cubic-bezier(0.23, 1, 0.32, 1) 600ms forwards;
+	-o-animation: page2-picDown 2s cubic-bezier(0.23, 1, 0.32, 1) 600ms forwards;
+	animation: page2-picDown 2s cubic-bezier(0.23, 1, 0.32, 1) 600ms forwards;
+}
+
+#page2 #page2-text0 {
+	top: 100px;
+	left: 60px;
+	width: 480px;
+	height: 450px;
+	z-index: 2;
+	background: url(../img/2/pane.png) no-repeat;
+	background-size: 100%;
+}
+
+#page2 #page2-text1 {
+	top: 1100px;
+	left: 480px;
+	width: 400px;
+	height: 300px;
+	z-index: 2;
+	background: url(../img/2/pane.png) no-repeat;
+	background-size: 100%;
+}
+
+#page2 .page2-text {
+	font: bold 40px "微软雅黑";
+	padding: 12px 20px;
+	opacity: 0;
+	position: absolute;
+	-webkit-animation: opacity 1s linear 1s forwards;
+	-moz-animation: opacity 1s linear 1s forwards;
+	-o-animation: opacity 1s linear 1s forwards;
+	animation: opacity 1s linear 1s forwards;
+}
+
+#page2 .arrow {
+	width: 100%;
+	height: 50px;
+	bottom: 80px;
+	position: absolute;
+	background: url(../img/1/arrow.png) center bottom no-repeat;
+	-webkit-animation: arrow 1s cubic-bezier(.55,.055,.675,.19) 0s infinite alternate;
+	-moz-animation: arrow 1s cubic-bezier(.55,.055,.675,.19) 0s infinite alternate;
+	-o-animation: arrow 1s cubic-bezier(.55,.055,.675,.19) 0s infinite alternate;
+	animation: arrow 1s cubic-bezier(.55,.055,.675,.19) 0s infinite alternate;
+}
+
+#page3 {
+	width: 100%;
+	display: none;
+	-webkit-animation: opacity 600ms linear 0s forwards;
+	-moz-animation: opacity 600ms linear 0s forwards;
+	-o-animation: opacity 600ms linear 0s forwards;
+	animation: opacity 600ms linear 0s forwards;
+}
+
+#page3 #page3-picBox {
+	width: 100%;
+	height: 860px;
+	overflow: hidden;
+	position: relative;
+	background: url(../img/3/obg.png) center 240px no-repeat;
+}
+
+#page3 #page3-picBox #picLeft {
+	top: 580px;
+	left: -300px;
+	width: 400px;
+	height: 280px;
+	opacity: 0;
+	z-index: 1;
+	position: absolute;
+	background: url(../img/3/left.png) no-repeat;
+	background-size: 100%;
+	-webkit-animation: page3-picLeft 2s cubic-bezier(0.23, 1, 0.32, 1) 0s forwards;
+	-moz-animation: page3-picLeft 2s cubic-bezier(0.23, 1, 0.32, 1) 0s forwards;
+	-o-animation: page3-picLeft 2s cubic-bezier(0.23, 1, 0.32, 1) 0s forwards;
+	animation: page3-picLeft 2s cubic-bezier(0.23, 1, 0.32, 1) 0s forwards;
+}
+
+#page3 #page3-picBox #picRight {
+	top: 580px;
+	left: 700px;
+	width: 520px;
+	height: 280px;
+	opacity: 0;
+	z-index: 3;
+	position: absolute;
+	background: url(../img/3/right.png) no-repeat;
+	background-size: 100%;
+	-webkit-animation: page3-picRight 2s cubic-bezier(0.23, 1, 0.32, 1) 600ms forwards;
+	-moz-animation: page3-picRight 2s cubic-bezier(0.23, 1, 0.32, 1) 600ms forwards;
+	-o-animation: page3-picRight 2s cubic-bezier(0.23, 1, 0.32, 1) 600ms forwards;
+	animation: page3-picRight 2s cubic-bezier(0.23, 1, 0.32, 1) 600ms forwards;
+}
+
+#page3 #page3-picBox #picCenter {
+	top: -500px;
+	left: 100px;
+	width: 820px;
+	height: 720px;
+	opacity: 0;
+	z-index: 2;
+	position: absolute;
+	background: url(../img/3/center.png) no-repeat;
+	background-size: 100%;
+	-webkit-animation: page3-picCenter 2s cubic-bezier(0.23, 1, 0.32, 1) 1200ms forwards;
+	-moz-animation: page3-picCenter 2s cubic-bezier(0.23, 1, 0.32, 1) 1200ms forwards;
+	-o-animation: page3-picCenter 2s cubic-bezier(0.23, 1, 0.32, 1) 1200ms forwards;
+	animation: page3-picCenter 2s cubic-bezier(0.23, 1, 0.32, 1) 1200ms forwards;
+}
+
+#page3 #tips {
+	font: bold 50px "微软雅黑";
+	width: 700px;
+	height: 350px;
+	margin: 64px auto;
+	opacity: 0;
+	background: url(../img/3/tipsBg.png);
+	background-size: 100%;
+	-webkit-animation: opacity 1s linear 1s forwards;
+	-moz-animation: opacity 1s linear 1s forwards;
+	-o-animation: opacity 1s linear 1s forwards;
+	animation: opacity 1s linear 1s forwards;
+}
+
+#page3 #tips table {
+	width: 620px;
+	margin: 0 auto;
+}
+
+#page3 #tips table tr:first-child td {
+	padding-top: 8px;
+}
+
+#page3 #tips table tr td:first-child {
+	width: 150px;
+}
+
+#page3 #tips p {
+	color: #EABE36;
+	text-align: center;
+	padding-top: 12px;
+}
+
+#page4 {
+	width: 100%;
+	display: none;
+	position: absolute;
+	-webkit-animation: opacity 600ms linear 0s forwards;
+	-moz-animation: opacity 600ms linear 0s forwards;
+	-o-animation: opacity 600ms linear 0s forwards;
+	animation: opacity 600ms linear 0s forwards;
+}
+
+#page4 p {
+	font: bold 80px/140px "Consolas";
+	left: 10px;
+	color: #FFF;
+	width: 930px;
+	height: 140px;
+	padding: 0 10px;
+	opacity: 0;
+	position: absolute;
+	text-align: right;
+}
+
+#page4 #sum {
+	top: 530px;
+	background: #000;
+}
+
+#page4 #level {
+	top: 670px;
+	background: #000;
+}
+
+#page4 #cBg {
+	width: 940px;
+	height: 800px;
+	margin: 845px 0 0 16px;
+	position: absolute;
+}
+
+#page4 #page4-bg {
+	width: 100%;
+	height: 1730px;
+	background: url(../img/4/cbg.png) no-repeat;
+	background-size: 100%;
+}
+
+#page5 {
+	width: 100%;
+	display: none;
+	position: absolute;
+	background: rgba(0, 0, 0, 0.4);
+	-webkit-animation: opacity 300ms linear 0s forwards;
+	-moz-animation: opacity 300ms linear 0s forwards;
+	-o-animation: opacity 300ms linear 0s forwards;
+	animation: opacity 300ms linear 0s forwards;
+}
+
+#page5 #resultPane {
+	width: 80%;
+	height: 1050px;
+	margin: 300px auto 0 auto;
+	background: url(../img/5/tBg.png) no-repeat;
+	background-size: 100%;
+}
+
+#page5 #resultPane #resultTitle {
+	width: 500px;
+	height: 200px;
+	margin: 0 auto;
+	background: url(../img/5/title.png) center no-repeat;
+	background-size: 100%;
+}
+
+#page5 #resultPane table {
+	font: bold 55px "Consolas", "微软雅黑";
+	margin: 32px 0;
+}
+
+#page5 #resultPane table tr td:first-child {
+	width: 300px;
+	text-align: right;
+}
+
+#page5 #resultPane h1 {
+	font: bold 80px "微软雅黑";
+	color: #FF7A9B;
+	padding: 22px 0 0 0;
+	text-align: center;
+	text-shadow: 1px 1px 2px #000;
+}
+
+#page5 #resultPane p {
+	font: 50px "微软雅黑";
+	text-align: center;
+}
+
+/*------------------ Controllers ------------------*/
+
+#controllers {
+	width: 100%;
+	z-index: 999;
+	position: absolute;
+}
+
+#page3-control {
+	bottom: 64px;
+	display: none;
+	opacity: 0;
+	position: absolute;
+	text-align: center;
+	-webkit-animation: opacity 1s linear 2s forwards;
+	-moz-animation: opacity 1s linear 2s forwards;
+	-o-animation: opacity 1s linear 2s forwards;
+	animation: opacity 1s linear 2s forwards;
+}
+
+#page3-control input {
+	height: 80px;
+}
+
+#page3-control select {
+	height: 100px;
+	margin-left: 64px;
+}
+
+#page3-control input, #page3-control select {
+	font: bold 45px/50px "Consolas", "微软雅黑";
+	color: #777;
+	width: 350px;
+	border: 8px solid #333;
+	padding-left: 16px;
+	border-radius: 16px;
+}
+
+#page3-control button {
+	width: 800px;
+	height: 130px;
+	border: none;
+	background: url(../img/3/btn.png);
+	margin-top: 50px;
+	background-size: 100%;
+}
+
+#page4-control {
+	display: none;
+}
+
+#page4-control table {
+	margin: 855px 0 0 22px;
+}
+
+#page4-control table tr td {
+	width: 230px;
+	height: 258px;
+	border: 2px solid #000;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#page4-control #plus {
+	width: 70px;
+	height: 70px;
+}
+
+#page4-control #result {
+	font: 64px "微软雅黑";
+}
+
+#page5-control {
+	width: 100%;
+	display: none;
+	position: absolute;
+}
+
+#music {
+	top: 32px;
+	right: 32px;
+	width: 100px;
+	height: 100px;
+	opacity: 0;
+	z-index: 9999;
+	position: absolute;
+	transform: rotate(-30deg);
+	background: url(../img/0/bgmOn.png);
+	background-size: 100%;
+	-webkit-animation: bgm 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s infinite alternate;
+	-moz-animation: bgm 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s infinite alternate;
+	-o-animation: bgm 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s infinite alternate;
+	animation: bgm 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s infinite alternate;
+}

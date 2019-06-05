@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+@keyframes opacity {
+	from {
+		opacity: 0;
+	} to {
+		opacity: 1;
+	}
+}
+
+@keyframes turn {
+	from{
+		transform: rotate(-360deg);
+	} to {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes arrow {
+	from{
+		bottom: 80px;
+	} to {
+		bottom: 50px;
+	}
+}
+
+@keyframes page2-picUp {
+	from {
+		left: 800px;
+		opacity: 0;
+	} to {
+		left: 0;
+		opacity: 1;
+	}
+}
+
+@keyframes page2-picDown {
+	from {
+		left: -800px;
+		opacity: 0;
+	} to {
+		left: 0;
+		opacity: 1;
+	}
+}
+
+@keyframes page3-picLeft {
+	from {
+		left: -300px;
+		opacity: 0;
+	} to {
+		left: 40px;
+		opacity: 1;
+	}
+}
+
+@keyframes page3-picRight {
+	from {
+		left: 700px;
+		opacity: 0;
+	} to {
+		left: 380px;
+		opacity: 1;
+	}
+}
+
+@keyframes page3-picCenter {
+	from {
+		top: -500px;
+		opacity: 0;
+	} to {
+		top: 90px;
+		opacity: 1;
+	}
+}
+
+@keyframes plus {
+	from {
+		width: 70px;
+		height: 70px;
+	} to {
+		width: 100px;
+		height: 100px;
+	}
+}
+
+@keyframes bgm {
+	from {
+		transform: rotate(-30deg);
+	} to {
+		transform: rotate(30deg);
+	}
+}

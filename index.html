@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>健康值计算器</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/animations.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<div id="canvas">
+			<div id="page0" class="page">
+				<div id="logo"></div>
+				<div id="loading"></div>
+				<div id="loadPer"></div>
+			</div>
+			<div id="page1">
+				<div id="page0-picBox">
+					<div id="amd"></div>
+					<div id="amdLeft"></div>
+					<div id="amdRight"></div>
+				</div>
+				<div id="page1-text">
+					<i id="lq" class="q"></i>
+					<i id="rq" class="q"></i>
+					<p id="page1-text0">随着农业技术的发展</p>
+					<p id="page1-text1">本应成为主食的五谷杂粮</p>
+					<p id="page1-text2">却渐渐被快餐零食所替代</p>
+					<p id="page1-text3">人们的健康水平</p>
+					<p id="page1-text4">也在餐饮条件的变化下</p>
+					<p id="page1-text5">变得参差不齐</p>
+				</div>
+				<div id="food"></div>
+				<div class="arrow"></div>
+			</div>
+			<div id="page2">
+				<div id="picUp"></div>
+				<div id="picDown"></div>
+				<div id="page2-text0" class="page2-text">
+					<p>每天上班这么忙，</p>
+					<p>哪儿有时间弄吃的，</p>
+					<p>还是路边摊管饱又</p>
+					<p>方便快捷! </p>
+				</div>
+				<div id="page2-text1" class="page2-text">
+					<p>年轻就是身体好，</p>
+					<p>有这么多好吃的摆着，</p>
+					<p>控制不住就想去吃!</p>
+				</div>
+				<div class="arrow"></div>
+			</div>
+			<div id="page3">
+				<div id="page3-picBox">
+					<div id="picLeft"></div>
+					<div id="picRight"></div>
+					<div id="picCenter"></div>
+				</div>
+				<div id="tips">
+					<table>
+						<tr>
+							<td>据说：</td>
+							<td>“多吃五谷杂粮对身体好！”</td>
+						</tr>
+					</table>
+					<p>算算你的健康值！</p>
+				</div>
+			</div>
+			<div id="page4">
+				<p id="sum"></p>
+				<p id="level"></p>
+				<div id="cBg"></div>
+				<div id="page4-bg"></div>
+			</div>
+			<div id="page5">
+				<div id="resultPane">
+					<div id="resultTitle"></div>
+					<table>
+						<tr><td>名字：</td><td id="resultName"></td></tr>
+						<tr><td>分数：</td><td id="resultValue"></td></tr>
+						<tr><td>结果：</td><td id="resultLevel"></td></tr>
+					</table>
+					<div id="page5-text">
+						<h1 id="resultLevel-title"></h1>
+						<p id="page5-text0"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="controllers">
+			<div id="page3-control">
+				<input id="name" type="text" min="2" max="4" placeholder="输入姓名" />
+				<select id="oc">
+					<option value="none">选择职业</option>
+					<option value="stu">学生</option>
+					<option value="oc">上班族</option>
+				</select>
+				<button id="button" onclick="page4();ac()"></button>
+			</div>
+			<div id="page4-control">
+				<table>
+					<tr>
+						<td id="btn0" onclick="select(this, 100)"></td>
+						<td id="btn1" onclick="select(this, 100)"></td>
+						<td id="btn2" onclick="select(this, 100)"></td>
+						<td onclick="ac()"></td>
+					</tr>
+					<tr>
+						<td id="btn3" onclick="select(this, 100)"></td>
+						<td id="btn4" onclick="select(this, 100)"></td>
+						<td id="btn5" onclick="select(this, 100)"></td>
+						<td onclick="plus()">
+							<img id="plus" src="img/4/plus.png" />
+						</td>
+					</tr>
+					<tr>
+						<td id="btn6" onclick="select(this, 50)"></td>
+						<td id="btn7" onclick="select(this, 50)"></td>
+						<td id="btn8" onclick="select(this, 50)"></td>
+						<td id="result" onclick="result();"></td>
+					</tr>
+				</table>
+			</div>
+			<div id="page5-control"></div>
+			<div id="music"></div>
+		</div>
+		<input id="nowPage" type="hidden" value="0" />
+		<audio id="audio" src="media/bgm.mp3" loop>当前浏览器不支持audio</audio>
+		<audio id="clickSound" src="media/click.mp3">当前浏览器不支持audio</audio>
+		<script src="js/public.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/event.js"></script>
+	</body>
+</html>
